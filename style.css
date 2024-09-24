@@ -1,0 +1,321 @@
+body {
+    background: rgb(88, 139, 211);
+    display: flex; 
+    height: 100vh;
+    width: 100vw;
+    font-family: "Work Sans", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    font-size: 15vmin;
+    position: absolute;
+}
+
+
+.border {
+    color: rgb(84, 99, 230);
+    text-shadow:
+       -1px -1px 0 white, 
+       1px -1px 0 white,
+       -1px 1px 0 white,
+       1px 1px 0 white;  
+}
+
+.wave {
+    color: rgb(39, 49, 109);    
+    animation: shift 3s ease-in-out infinite;
+}
+
+
+@keyframes shift {
+    0%, 100% {
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+
+50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+}
+
+}
+
+
+.inputito{
+    position: relative;
+    padding-bottom: 20%;
+}
+
+.inputito input{
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border:2px solid #fff ;
+    background: transparent;
+    color: #fff;
+    outline: none;  
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputito label{
+    position: absolute;
+    top: 10%;
+    left: 15px;
+    transform:translateY(-50%) ;
+    color: #fff;
+    font-size: 18px;
+    pointer-events: none; 
+    transition: .3s;
+}
+
+input:focus ~ label{
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    background: rgb(88, 139, 211);
+
+}
+
+
+.boton{
+    position: relative;
+    padding-bottom: 20%;
+    padding-left: 2%;
+}
+#boton{
+    background-color: #3c68c5; 
+    color: white; 
+    width: 150px;
+    height:60px ;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+#boton:hover {
+    background-color: #323eac; 
+    transform: scale(1.05); 
+}
+
+#boton:active {
+    background-color: #3e8e41; 
+    transform: scale(2.98); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.burbujas div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 37.5px, lightblue 45px , blue 50px); /* Degradado corregido */
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px white inset, 2.5px 2.5px 10px ;
+
+
+    &::after{
+        content: "";
+        width: 20px;
+        height:7.5px ;
+        background: radial-gradient(transparent, white);
+        border-radius: 25%;
+        transform: rotate(-45deg) ;
+        top: 12.5px;
+        left: 12.5px;
+        position: absolute;
+        
+
+    }
+animation: animarburbujas 4s linear infinite ;
+
+}
+
+.burbujas div:nth-child(1){
+    left: 10%;
+    animation-duration: 4s;
+
+}
+
+.burbujas div:nth-child(2){
+    left: 25%;
+    animation-duration: 9s;
+}
+
+.burbujas div:nth-child(3){
+    left: 25%;
+    animation-duration: 12s;
+}
+
+.burbujas div:nth-child(4){
+    left: 35%;
+    animation-duration: 15s;
+}
+
+.burbujas div:nth-child(5){
+    left: 50%;
+    animation-duration: 3s;
+}
+
+.burbujas div:nth-child(6){
+    left: 75%;
+    animation-duration: 12s;
+}
+
+.burbujas div:nth-child(7){
+    left: 90%;
+    animation-duration: 7s;
+}
+
+.burbujas div:nth-child(8){
+    left: 65%;
+    animation-duration: 6s;
+}
+
+@keyframes animarburbujas{
+  0%{
+    width: 0;
+    height: 0;
+  } 
+  
+  3%{
+    width: 100px;
+    height: 100px;
+  }
+
+  50%{
+    margin-left: 100px;
+    opacity: 0.5;
+
+  }
+
+  100%{
+    transform: rotate(90deg);
+    bottom: 100vh;
+    background: radial-gradient(circle, transparent 37.5px, lightblue 45px , rgb(68, 212, 1) 50px);
+  }
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.burbujas2 div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(circle, transparent 37.5px, lightblue 45px , blue 50px); /* Degradado corregido */
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px white inset, 2.5px 2.5px 10px ;
+
+
+    &::after{
+        content: "";
+        width: 20px;
+        height:7.5px ;
+        background: radial-gradient(transparent, white);
+        border-radius: 25%;
+        transform: rotate(-45deg) ;
+        top: 12.5px;
+        left: 12.5px;
+        position: absolute;
+        
+
+    }
+animation: animarburbujas2 4s linear infinite ;
+
+}
+
+.burbujas2 div:nth-child(1){
+    left: 5%;
+    animation-duration: 12s;
+
+}
+
+.burbujas2 div:nth-child(2){
+    left: 25%;
+    animation-duration: 4s;
+}
+
+.burbujas2 div:nth-child(3){
+    left: 30%;
+    animation-duration: 20s;
+}
+
+.burbujas2 div:nth-child(4){
+    left: 35%;
+    animation-duration: 15s;
+}
+
+.burbujas2 div:nth-child(5){
+    left: 80%;
+    animation-duration: 10s;
+}
+
+.burbujas2 div:nth-child(6){
+    left: 85%;
+    animation-duration: 15s;
+}
+
+.burbujas2 div:nth-child(7){
+    left: 90%;
+    animation-duration: 7s;
+}
+
+.burbujas2 div:nth-child(8){
+    left: 65%;
+    animation-duration: 6s;
+}
+
+@keyframes animarburbujas2{
+  0%{
+    width: 0;
+    height: 0;
+  } 
+  
+  3%{
+    width: 100px;
+    height: 100px;
+  }
+
+  50%{
+    margin-right: 100px;
+    opacity: 0.5;
+
+  }
+
+  100%{
+    transform: rotate(90deg);
+    top: 100vh;
+    background: radial-gradient(circle, transparent 37.5px, lightblue 45px , rgb(68, 212, 1) 50px);
+  }
+}
