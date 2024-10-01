@@ -51,7 +51,7 @@ h2 {
     padding-bottom: 20%;
 }
 
-.inputito input{
+.interInput{
     width: 350px;
     height: 60px;
     border-radius: 6px;
@@ -324,3 +324,17 @@ animation: animarburbujas2 4s linear infinite ;
     background: radial-gradient(circle, transparent 37.5px, lightblue 45px , rgb(68, 212, 1) 50px);
   }
 }
+
+
+@media (max-width: 600px) {
+  .interInput{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 25px;
+  }
+  #boton{
+    width: 100px;
+    height:40px ;
+    margin-bottom: 25px;
+  }
+  }
